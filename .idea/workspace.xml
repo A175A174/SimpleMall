@@ -6,188 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5538781-5e50-496a-a24d-b165d2295758" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SimpleMall_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/320d7d2a-81c9-4f9a-9905-58a16e22d852.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleMall.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alipay/demo/trade/DemoHbRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alipay/demo/trade/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/common/Const.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/common/ResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/common/ServiceResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/common/TokenCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/backend/CategoryManageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/backend/OrderManageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/backend/ProductManageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/backend/UserManageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/portal/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/portal/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/portal/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/portal/ShippingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/controller/portal/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/dao/CartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/dao/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/dao/OrderItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/dao/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/dao/PayInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/dao/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/dao/ShippingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/pojo/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/pojo/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/pojo/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/pojo/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/pojo/PayInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/pojo/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/pojo/Shipping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/ICartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/ICategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/IFileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/IOrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/IShippingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/FileServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/ShippingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/util/BigDecimalUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/util/DateTimeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/util/FTPUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/util/MD5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/util/PropertiesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/CartProductVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/CartVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/OrderItemVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/OrderProductVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/OrderVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/ProductDetailVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/ProductListVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mall/vo/ShippingVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/GeneratorConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/SimpleMall.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-datasource.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/datasource.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/CartMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/CategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/OrderItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/PayInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/ShippingMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql-connector-java-8.0.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/zfbinfo.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-sdk-java-3.3.0-source.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-sdk-java-3.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-trade-sdk-20161215-source.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/alipay-trade-sdk-20161215.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/GeneratorConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/SimpleMall.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/applicationContext-datasource.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/alipay/demo/trade/DemoHbRunner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/alipay/demo/trade/Main$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/alipay/demo/trade/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const$AlipayCallback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const$Cart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const$OrderStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const$PayPlatformEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const$PaymentTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const$ProductListOrderBy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const$ProductStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const$Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/Const.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/ResponseCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/ServiceResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/TokenCache$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/common/TokenCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/backend/CategoryManageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/backend/OrderManageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/backend/ProductManageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/backend/UserManageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/portal/CartController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/portal/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/portal/ProductController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/portal/ShippingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/controller/portal/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/dao/CartMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/dao/CategoryMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/dao/OrderItemMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/dao/OrderMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/dao/PayInfoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/dao/ProductMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/dao/ShippingMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/dao/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/pojo/Cart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/pojo/Category.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/pojo/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/pojo/OrderItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/pojo/PayInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/pojo/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/pojo/Shipping.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/pojo/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/ICartService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/ICategoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/IFileService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/IOrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/IProductService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/IShippingService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/IUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/impl/CartServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/impl/CategoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/impl/FileServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/impl/OrderServiceImpl$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/impl/OrderServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/impl/ProductServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/impl/ShippingServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/util/BigDecimalUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/util/DateTimeUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/util/FTPUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/util/MD5Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/util/PropertiesUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/vo/CartProductVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/vo/CartVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/vo/OrderItemVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/vo/OrderProductVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/vo/OrderVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/vo/ProductDetailVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/vo/ProductListVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/mall/vo/ShippingVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/datasource.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mallwiki.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mappers/CartMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mappers/CategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mappers/OrderItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mappers/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mappers/PayInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mappers/ProductMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mappers/ShippingMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mysql-connector-java-8.0.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/zfbinfo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mallwiki.markdown" beforeDir="false" />
-    </list>
+    <list default="true" id="e5538781-5e50-496a-a24d-b165d2295758" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -237,7 +56,7 @@
     <session id="107238801">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="1" />
@@ -253,9 +72,10 @@
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -321,7 +141,7 @@
     <favorites_list name="SimpleMall" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -464,7 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -500,6 +319,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -682,11 +502,12 @@
       <workItem from="1533447234117" duration="6821000" />
       <workItem from="1533461861571" duration="5688000" />
       <workItem from="1533474532915" duration="5243000" />
+      <workItem from="1533643911109" duration="411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100570000" />
+    <option name="totallyTimeSpent" value="100981000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -700,7 +521,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49840257" visible="true" weight="0.20682302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49840257" visible="true" weight="0.20895523" />
       <window_info id="Structure" order="1" sideWeight="0.50159746" side_tool="true" weight="0.19829424" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -976,9 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,10 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1232">
           <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-          <folding>
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,9 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,9 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1355">
           <caret line="77" column="41" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1129,9 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="559" column="64" selection-start-line="559" selection-start-column="64" selection-end-line="559" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
