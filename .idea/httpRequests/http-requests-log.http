@@ -1,0 +1,6 @@
+POST http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
+
