@@ -2,7 +2,7 @@ package com.mall.util;
 
 import com.mall.common.RedisPool;
 import lombok.extern.slf4j.Slf4j;
-import redis.clients.jedis.Jedis;
+import redis.clients.jedis.ShardedJedis;
 
 @Slf4j
 public class RedisPoolUtil {
@@ -14,7 +14,7 @@ public class RedisPoolUtil {
      * @return
      */
     public static Long expire(String key, int exTime) {
-        Jedis jedis = null;
+        ShardedJedis jedis = null;
         Long result = null;
         try {
             jedis = RedisPool.getJedis();
@@ -30,7 +30,7 @@ public class RedisPoolUtil {
 
     //exTime的单位是秒
     public static String setEx(String key, String value, int exTime) {
-        Jedis jedis = null;
+        ShardedJedis jedis = null;
         String result = null;
         try {
             jedis = RedisPool.getJedis();
@@ -45,9 +45,8 @@ public class RedisPoolUtil {
     }
 
     public static String set(String key, String value) {
-        Jedis jedis = null;
+        ShardedJedis jedis = null;
         String result = null;
-
         try {
             jedis = RedisPool.getJedis();
             result = jedis.set(key, value);
@@ -61,7 +60,7 @@ public class RedisPoolUtil {
     }
 
     public static String get(String key) {
-        Jedis jedis = null;
+        ShardedJedis jedis = null;
         String result = null;
         try {
             jedis = RedisPool.getJedis();
@@ -76,7 +75,7 @@ public class RedisPoolUtil {
     }
 
     public static Long del(String key) {
-        Jedis jedis = null;
+        ShardedJedis jedis = null;
         Long result = null;
         try {
             jedis = RedisPool.getJedis();
@@ -91,7 +90,7 @@ public class RedisPoolUtil {
     }
 
     public static void main(String[] args) {
-        Jedis jedis = RedisPool.getJedis();
+        ShardedJedis jedis = RedisPool.getJedis();
         RedisPoolUtil.set("keyTest", "value");
         String value = RedisPoolUtil.get("keyTest");
         RedisPoolUtil.setEx("keyex", "valueex", 60 * 10);

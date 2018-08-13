@@ -1,13 +1,16 @@
 package com.mall.common;
 
 import com.mall.util.PropertiesUtil;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.*;
+import redis.clients.util.Hashing;
+import redis.clients.util.Sharded;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RedisPool {
     //jedis连接池
-    private static JedisPool pool;
+    private static ShardedJedisPool pool;
 
     //最大连接数
     private static Integer maxTotal = Integer.parseInt(PropertiesUtil.getProperty("redis.max.total", "20"));
@@ -24,8 +27,10 @@ public class RedisPool {
     //在return一个jedis实例的时候，是否要进行验证操作，如果赋值true。则放回jedispool的jedis实例肯定是可以用的。
     private static Boolean testOnReturn = Boolean.parseBoolean(PropertiesUtil.getProperty("redis.test.return", "true"));
 
-    private static String redisIp = PropertiesUtil.getProperty("redis.ip");
-    private static Integer redisPort = Integer.parseInt(PropertiesUtil.getProperty("redis.port"));
+    private static String redis1Ip = PropertiesUtil.getProperty("redis1.ip");
+    private static Integer redis1Port = Integer.parseInt(PropertiesUtil.getProperty("redis1.port"));
+    private static String redis2Ip = PropertiesUtil.getProperty("redis2.ip");
+    private static Integer redis2Port = Integer.parseInt(PropertiesUtil.getProperty("redis2.port"));
 
     /**
      * 初始化连接池
@@ -37,26 +42,32 @@ public class RedisPool {
         config.setMinIdle(minIdle);
         config.setTestOnBorrow(testOnBorrow);
         config.setTestOnReturn(testOnReturn);
-        //连接耗尽的时候，是否阻塞，false会抛出异常，true阻塞直到超时。默认为true。
+        //连接耗尽的时候，是否阻塞，false会抛出异常，true阻塞直到超时。默认为true
         config.setBlockWhenExhausted(true);
-        pool = new JedisPool(config, redisIp, redisPort, 1000 * 2);
+
+        JedisShardInfo info1 = new JedisShardInfo(redis1Ip,redis1Port,1000*2);
+        JedisShardInfo info2 = new JedisShardInfo(redis2Ip,redis2Port,1000*2);
+        List<JedisShardInfo> jedisShardInfoList = new ArrayList<JedisShardInfo>(2);
+        jedisShardInfoList.add(info1);
+        jedisShardInfoList.add(info2);
+        pool = new ShardedJedisPool(config,jedisShardInfoList, Hashing.MURMUR_HASH, Sharded.DEFAULT_KEY_TAG_PATTERN);
     }
 
     static {
         initPool();
     }
 
-    public static Jedis getJedis() {
+    public static ShardedJedis getJedis() {
         return pool.getResource();
     }
 
-    public static void returnResource(Jedis jedis) {
+    public static void returnResource(ShardedJedis jedis) {
         //todo close
         jedis.close();
     }
 
     public static void main(String[] args) {
-        Jedis jedis = pool.getResource();
+        ShardedJedis jedis = pool.getResource();
         jedis.set("kekeke", "veveveveve");
         returnResource(jedis);
         pool.destroy();//销毁连接池中的所有连接
