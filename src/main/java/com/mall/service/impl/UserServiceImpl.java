@@ -7,6 +7,7 @@ import com.mall.dao.UserMapper;
 import com.mall.pojo.User;
 import com.mall.service.IUserService;
 import com.mall.util.MD5Util;
+import com.mall.util.RedisPoolUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -101,7 +102,7 @@ public class UserServiceImpl implements IUserService {
         int restulCount = userMapper.checkAnswer(username, question, answer);
         if (restulCount > 0){
             String forgetToken = UUID.randomUUID().toString();
-            TokenCache.setKey(TokenCache.TOKEN_PREFIX+username,forgetToken);
+            RedisPoolUtil.setEx(TokenCache.TOKEN_PREFIX+username,forgetToken,Const.RedisCacheExtime.REDIS_SESSION_EXTIME);
             return ServiceResponse.createBySuccessMessage(forgetToken);
         }
         return ServiceResponse.createByErrorMessage("问题答案错误");
@@ -115,7 +116,7 @@ public class UserServiceImpl implements IUserService {
         if (response.isSuccess()){
             return ServiceResponse.createByErrorMessage("用户不存在");
         }
-        String token = TokenCache.getKey(TokenCache.TOKEN_PREFIX+username);
+        String token = RedisPoolUtil.get(TokenCache.TOKEN_PREFIX+username);
         if (StringUtils.isBlank(token)){
             return ServiceResponse.createByErrorMessage("token无效或过期");
         }
@@ -123,6 +124,7 @@ public class UserServiceImpl implements IUserService {
             String md5Password = MD5Util.MD5EncodeUtf8(passwordNew);
             int rowCount = userMapper.updatePasswordByUsername(username, md5Password);
             if (rowCount > 0){
+                RedisPoolUtil.del(TokenCache.TOKEN_PREFIX+username);
                 return ServiceResponse.createBySuccessMessage("修改密码成功");
             }
         }else {

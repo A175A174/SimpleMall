@@ -24,6 +24,16 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!--过滤器，重置Redis时间-->
+    <filter>
+        <filter-name>SessionExpireFilter</filter-name>
+        <filter-class>com.mall.controller.common.SessionExpireFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SessionExpireFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
     <!--监听器-->
     <listener>
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
@@ -33,18 +43,22 @@
     </listener>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml</param-value>
+        <param-value>classpath:spring.xml</param-value>
     </context-param>
 
     <!--SpringMVC拦截指定路径请求-->
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <description>加载/WEB-INF/dispatcher-servlet.xml配置文件</description>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-mvc.xml</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup><!-->=0容器会初始化此servlet，否则使用时才初始化-->
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
-
 </web-app>

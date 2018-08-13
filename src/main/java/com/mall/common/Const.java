@@ -8,28 +8,36 @@ import java.util.Set;
 * 常量类
 * */
 public class Const {
-    public static final String CURRENT_USER = "currentUser";
 
+    //更新跟新个人信息，验证是否存在type常量
     public static final String EMAIL = "email";
     public static final String USERNAME = "username";
+
+    //Redis缓存时间
+    public interface RedisCacheExtime{
+        int REDIS_SESSION_EXTIME = 60 * 30;//30分钟
+    }
 
     //商品搜索排序
     public interface ProductListOrderBy{
         Set<String> PRICE_ASC_DESC = Sets.newHashSet("price_desc","price_asc");
     }
 
+    //购物车状态
     public interface Cart{
-        int CHECKED = 1;//即购物车选中状态
-        int UN_CHECKED = 0;//购物车中未选中状态
+        int CHECKED = 1;//选中状态
+        int UN_CHECKED = 0;//未选中状态
         String LIMIT_NUM_FAIL = "LIMIT_NUM_FAIL";
         String LIMIT_NUM_SUCCESS = "LIMIT_NUM_SUCCESS";
     }
 
+    //用户角色
     public interface Role{
         int ROLE_CUSTOMER = 0;//普通用户
         int ROLE_ADMIN = 1;//管理员
     }
 
+    //产品上下架状态
     public enum ProductStatusEnum{
         ON_SALE(1,"在线");
         private String value;
@@ -46,6 +54,7 @@ public class Const {
         }
     }
 
+    //订单状态
     public enum OrderStatusEnum{
         CANCELED(0,"已取消"),
         NO_PAY(10,"未支付"),
@@ -75,10 +84,11 @@ public class Const {
                     return orderStatusEnum;
                 }
             }
-            throw new RuntimeException("么有找到对应的枚举");
+            throw new RuntimeException("没有找到对应的枚举");
         }
     }
 
+    //付款方式
     public enum PaymentTypeEnum{
         ONLINE_PAY(1,"在线支付");
 
@@ -103,10 +113,11 @@ public class Const {
                     return paymentTypeEnum;
                 }
             }
-            throw new RuntimeException("么有找到对应的枚举");
+            throw new RuntimeException("没有找到对应的枚举");
         }
     }
 
+    //支付宝回调返回的指定字符串
     public interface  AlipayCallback{
         String TRADE_STATUS_WAIT_BUYER_PAY = "WAIT_BUYER_PAY";
         String TRADE_STATUS_TRADE_SUCCESS = "TRADE_SUCCESS";
@@ -114,6 +125,7 @@ public class Const {
         String RESPONSE_FAILED = "failed";
     }
 
+    //支付方式
     public enum PayPlatformEnum{
         ALIPAY(1,"支付宝");
 

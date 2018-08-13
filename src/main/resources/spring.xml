@@ -13,6 +13,6 @@
     <aop:aspectj-autoproxy/>
 
     <!--载入其它配置文件-->
-    <import resource="applicationContext-datasource.xml"/>
+    <import resource="spring-datasource.xml"/>
 
 </beans>

@@ -9,6 +9,9 @@ import com.mall.common.ResponseCode;
 import com.mall.common.ServiceResponse;
 import com.mall.pojo.User;
 import com.mall.service.IOrderService;
+import com.mall.util.CookieUtil;
+import com.mall.util.JsonUtil;
+import com.mall.util.RedisPoolUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,8 +34,8 @@ public class OrderController {
 
     //创建订单
     @RequestMapping("create.do")
-    public ServiceResponse create(HttpSession session, Integer shippingId){
-        User user = (User)session.getAttribute(Const.CURRENT_USER);
+    public ServiceResponse create(HttpServletRequest request, Integer shippingId){
+        User user = JsonUtil.string2Obj(RedisPoolUtil.get(CookieUtil.readLoginToken(request)), User.class);
         if(user ==null){
             return ServiceResponse.createByCodeErrorMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
@@ -41,8 +44,8 @@ public class OrderController {
 
     //取消订单
     @RequestMapping("cancel.do")
-    public ServiceResponse cancel(HttpSession session, Long orderNo){
-        User user = (User)session.getAttribute(Const.CURRENT_USER);
+    public ServiceResponse cancel(HttpServletRequest request, Long orderNo){
+        User user = JsonUtil.string2Obj(RedisPoolUtil.get(CookieUtil.readLoginToken(request)), User.class);
         if(user ==null){
             return ServiceResponse.createByCodeErrorMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
@@ -51,8 +54,8 @@ public class OrderController {
 
     //购物车中已经选中的商品详情
     @RequestMapping("get_order_cart_product.do")
-    public ServiceResponse getOrderCartProduct(HttpSession session){
-        User user = (User)session.getAttribute(Const.CURRENT_USER);
+    public ServiceResponse getOrderCartProduct(HttpServletRequest request){
+        User user = JsonUtil.string2Obj(RedisPoolUtil.get(CookieUtil.readLoginToken(request)), User.class);
         if(user ==null){
             return ServiceResponse.createByCodeErrorMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
@@ -61,8 +64,8 @@ public class OrderController {
 
     //订单详情
     @RequestMapping("detail.do")
-    public ServiceResponse detail(HttpSession session,Long orderNo){
-        User user = (User)session.getAttribute(Const.CURRENT_USER);
+    public ServiceResponse detail(HttpServletRequest request,Long orderNo){
+        User user = JsonUtil.string2Obj(RedisPoolUtil.get(CookieUtil.readLoginToken(request)), User.class);
         if(user ==null){
             return ServiceResponse.createByCodeErrorMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
@@ -71,8 +74,8 @@ public class OrderController {
 
     //订单列表
     @RequestMapping("list.do")
-    public ServiceResponse list(HttpSession session, @RequestParam(value = "pageNum",defaultValue = "1") int pageNum, @RequestParam(value = "pageSize",defaultValue = "10") int pageSize){
-        User user = (User)session.getAttribute(Const.CURRENT_USER);
+    public ServiceResponse list(HttpServletRequest request, @RequestParam(value = "pageNum",defaultValue = "1") int pageNum, @RequestParam(value = "pageSize",defaultValue = "10") int pageSize){
+        User user = JsonUtil.string2Obj(RedisPoolUtil.get(CookieUtil.readLoginToken(request)), User.class);
         if(user ==null){
             return ServiceResponse.createByCodeErrorMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
@@ -81,8 +84,8 @@ public class OrderController {
 
     //支付订单
     @PostMapping("pay.do")
-    public ServiceResponse pay(HttpSession session, Long orderNo, HttpServletRequest request){
-        User user = (User)session.getAttribute(Const.CURRENT_USER);
+    public ServiceResponse pay(HttpServletRequest request, Long orderNo){
+        User user = JsonUtil.string2Obj(RedisPoolUtil.get(CookieUtil.readLoginToken(request)), User.class);
         if(user ==null){
             return ServiceResponse.createByCodeErrorMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
@@ -128,8 +131,8 @@ public class OrderController {
 
     //轮询订单状态
     @RequestMapping("query_order_pay_status.do")
-    public ServiceResponse<Boolean> queryOrderPayStatus(HttpSession session, Long orderNo){
-        User user = (User)session.getAttribute(Const.CURRENT_USER);
+    public ServiceResponse<Boolean> queryOrderPayStatus(HttpServletRequest request, Long orderNo){
+        User user = JsonUtil.string2Obj(RedisPoolUtil.get(CookieUtil.readLoginToken(request)), User.class);
         if(user ==null){
             return ServiceResponse.createByCodeErrorMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
