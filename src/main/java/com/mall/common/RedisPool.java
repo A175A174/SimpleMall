@@ -67,7 +67,7 @@ public class RedisPool {
     }
 
     public static void main(String[] args) {
-        ShardedJedis jedis = pool.getResource();
+        ShardedJedis jedis = getJedis();
         jedis.set("kekeke", "veveveveve");
         returnResource(jedis);
         pool.destroy();//销毁连接池中的所有连接

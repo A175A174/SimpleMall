@@ -35,15 +35,19 @@ public class UserController {
     public ServiceResponse<User> login(String username, String password, HttpSession session, HttpServletResponse response){
         ServiceResponse<User> vresponse = iUserService.login(username, password);
         if (vresponse.isSuccess()){
-            RedisPoolUtil.setEx(session.getId(), JsonUtil.obj2String(vresponse.getData()),Const.RedisCacheExtime.REDIS_SESSION_EXTIME);
+            User data = vresponse.getData();
+            System.out.println(data);
+            System.out.println(JsonUtil.obj2String(data));
+            RedisPoolUtil.setEx(session.getId(), JsonUtil.obj2String(data),Const.RedisCacheExtime.REDIS_SESSION_EXTIME);
             CookieUtil.writeLoginToken(response,session.getId());
         }
         return vresponse;
     }
 
     @PostMapping("logout.do")
-    public ServiceResponse<String> logout(HttpServletRequest request){
+    public ServiceResponse<String> logout(HttpServletRequest request, HttpServletResponse response){
         RedisPoolUtil.del(CookieUtil.readLoginToken(request));
+        CookieUtil.delLoginToken(request,response);
         return ServiceResponse.createBySuccess("退出登陆成功");
     }
 
