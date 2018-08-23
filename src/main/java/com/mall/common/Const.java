@@ -144,4 +144,9 @@ public class Const {
             return code;
         }
     }
+
+    //分布式锁
+    public interface  REDIS_LOCK{
+        String CLOSE_ORDER_TASK_LOCK = "CLOSE_ORDER_TASK_LOCK";
+    }
 }

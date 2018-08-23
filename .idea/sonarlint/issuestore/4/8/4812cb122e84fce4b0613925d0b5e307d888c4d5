@@ -1,0 +1,17 @@
+
+hsquid:S1192”"PDefine a constant instead of duplicating this literal "è®¢å•ä¸å­˜åœ¨" 3 times.(×¯˜‘
+osquid:S1192Ì"WDefine a constant instead of duplicating this literal "ftp.server.http.prefix" 3 times.(ï˜˜Œ
+Xsquid:S2209["5Change this instance-reference to a static reference.(ŞÓ™Ğøÿÿÿÿ8Ãî±¾Õ,
+Ssquid:S2209l"5Change this instance-reference to a static reference.(­ïÜ‹8Ãî±¾Õ,
+Ysquid:S2209Ÿ"5Change this instance-reference to a static reference.(°ßÚ—øÿÿÿÿ8ƒÏ²¾Õ,
+W
+squid:S899¤"@Do something with the "boolean" value returned by "setWritable".(…óèó
+nsquid:S00117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¬‡Õıÿÿÿÿ
+Lsquid:S1066³"/Merge this if statement with the enclosing one.(¾‚Ï‘ùÿÿÿÿ
+esquid:S3457©"AFormat specifiers should be used instead of string concatenation.(¶€­©ıÿÿÿÿ8Ãî±¾Õ,
+Ysquid:S1854Å"ARemove this useless assignment to local variable "orderItemList".(³êÔ÷
+osquid:S00117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¬‡Õıÿÿÿÿ
+=squid:S2129Œ" Remove this "Double" constructor(œíöëıÿÿÿÿ
+;squid:S2153Œ"Remove the boxing to "Double".(œíöëıÿÿÿÿ
+Xsquid:S2209^"5Change this instance-reference to a static reference.(›ı®¡ıÿÿÿÿ8Ãî±¾Õ,
+vsquid:S2293‡"YReplace the type specification in this constructor call with the diamond operator ("<>").(­¢ÖÁûÿÿÿÿ
